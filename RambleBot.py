@@ -5,7 +5,7 @@ from discord.ext import commands
 
 TOKEN = ''
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '!')
 client.remove_command('help')
 
 @client.event
@@ -17,6 +17,16 @@ async def on_ready():
 
 # client.say doesn't need to specify a channel like send_message,
 # it simply sends it in the same channel as the command
+
+@client.command()
+async def sub(name):
+    output = name;
+    await client.say(output)
+
+@client.command()
+async def unsub(name):
+    output = name;
+    await client.say(output)
 
 @client.command()
 async def echo(*args):
@@ -31,7 +41,7 @@ async def help():
 
     embed = discord.Embed(title=" ", color=0xff8233)
     embed.set_author(name="Ramble Bot Help ")
-    embed.add_field(name='.help', value='Shows this help menu', inline=False)
+    embed.add_field(name='!help', value='Shows this help menu', inline=False)
     await client.say(embed=embed)
 
 client.run(TOKEN)

@@ -120,6 +120,7 @@ async def help():
     embed = discord.Embed(title=" ", color=color_help)
     embed.set_author(name="Ramble Bot Help ")
     embed.add_field(name= client.command_prefix + 'help', value='Shows this help menu', inline=False)
+    embed.add_field(name= client.command_prefix + 'set', value='Shows the set menu. Used to set preferences', inline=False)
     await client.say(embed=embed)
 
 client.run(TOKEN)

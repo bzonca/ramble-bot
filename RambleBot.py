@@ -1,3 +1,4 @@
+# Main script
 # Invite link:  https://discordapp.com/oauth2/authorize?client_id=478762645428633612&scope=bot
 import discord
 from discord.ext import commands
